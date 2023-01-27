@@ -1,0 +1,27 @@
+.logo
+{
+    position: relative;
+    /* margin-left: 10px; */
+    /* background: url(../images/logo.png); */
+    width: 50px;
+    left: 15px;
+    /* font-weight: bolder; */
+}
+.navbar-brand{
+    margin-left: 50px;
+    /* font-weight: bold; */
+}
+span{
+    font-weight: bold;
+}
+.navbar .navbar-nav{
+    margin-left: 1100px;
+}
+.nav-item:hover{
+    background:#535c68;
+    border-radius: 5px;
+    /* color:#fff; */
+}
+.nav-link:hover{
+    color: #fff;
+}

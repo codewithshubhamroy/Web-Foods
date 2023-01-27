@@ -1,0 +1,116 @@
+<div class="row p-4">
+    <div class="col-sm-4 col-3 ">
+      <h1 class="page-title ">Order List</h1>
+    </div>
+    <div class="col-sm-8 col-9 text-right m-b-20 ">
+      <div class="col-sm-12 text-right m-b-20">
+        <!-- <a 
+          class="btn btn-list btn-secondary btn-rounded float-right text-light"
+          (click)="lists()"
+          ><i class="fa fa-bars" aria-hidden="true"></i>
+          <span> List View</span>
+        </a> -->
+        <a 
+          class="btn btn-list btn-secondary btn-rounded float-right text-light"
+          (click)="lists()"
+          ><i class="fa fa-bars" aria-hidden="true"></i>
+           <span> Order List</span>
+        </a>
+        <a 
+          class="btn btn-secondary btn-rounded float-right text-light"
+          (click)="cards()"
+          ><i class="fa fa-paypal" aria-hidden="true"></i>
+          Payment List</a
+        >
+        <a
+          href="order"
+          class="btn add-app btn-secondary btn-rounded float-right text-light "
+          ><i class="fa fa-plus"></i> <span> Add Order</span>
+        </a>
+    
+        
+      </div>
+     
+    </div>
+    
+  </div>
+  <div class="row" *ngIf="list">
+        
+    <div class="col-md-12" >
+      <div class="table-responsive">
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              <th>Order no</th>
+              <th>Contact Name</th>
+              <th>Order Date</th>
+              <th>Items Order</th>
+              <th>Order Total</th>
+              <th>Tax Total</th>
+              <th>Grand Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let d of data"> 
+              <td>{{d.orderNo}}</td>
+              <td>
+                {{d.contactName}}
+              </td>
+              <td>{{d.orderDate}}</td>
+              <td>{{d.itemsOrdered}}</td>
+              <td>{{d.orderTotal}}</td>
+              <td>{{d.taxTotal}}%</td>
+              <td>{{d.grandTotal}}</td>
+              <td><span class="custom-badge "></span></td>
+              <td class="text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="card">
+        
+    <div class="col-md-12" >
+      <div class="table-responsive">
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              <th>Order no</th>
+              <th>Name On Card</th>
+              <th>Order Date</th>
+              <th>Items Order</th>
+              <th>Order Total</th>
+              <th>Tax Total</th>
+              <th>Grand Total</th>
+              <th>Credit Card Number</th>
+              <th>CVV Number</th>
+              <th>Exp Month and Year</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let d of data"> 
+              <td>payment order number</td>
+              <td>
+                {{d.contactName}}
+              </td>
+              <td>{{d.orderDate}}</td>
+              <td>{{d.itemsOrdered}}</td>
+              <td>{{d.orderTotal}}</td>
+              <td>{{d.taxTotal}}%</td>
+              <td>{{d.grandTotal}}</td>
+              <td>credit card number</td>
+              <td>CVV number</td>
+              <td>Exp Year</td>
+              <td><span class="custom-badge "></span></td>
+              <td class="text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

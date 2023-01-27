@@ -1,0 +1,118 @@
+
+<div class="row mt-5">
+    
+    <div class="col-lg-8 offset-lg-2 ">
+        <h1 class="text-center">Payment Details</h1>
+      <form [formGroup]="paymentForm" (ngSubmit)="paymentDone()">
+        <div class="row">
+          <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>Credit Card Number</label>
+              <input class="form-control" type="number"  placeholder="Order No-0001" formControlName="cardNumber" />
+              <span *ngIf="cardNumber && cardNumber.invalid " class="text-danger">This Field is Required!</span>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>Name on card</label>
+              <input class="form-control" type="text" placeholder="Your Name"  />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>Order Date</label>
+              <div class="cal-icon">
+                <input type="date" min="{{minDate}}" class="form-control " placeholder="Order Date"  />
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>Time</label>
+              <div class="time-icon">
+                <input type="number" class="form-control" id="datetimepicker3" placeholder="Order Time"  />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 p-3">
+            <div class="form-group">
+              <label>Exp Month</label>
+              <input class="form-control" type="number"  placeholder=" Ex-Month"  />
+              <!-- <input class="form-control" type="number"  placeholder="Order Count to be display"  /> -->
+            </div>
+          </div>
+          <div class="col-md-2 p-3">
+            <div class="form-group">
+              <label>Exp Year</label>
+              <input class="form-control" type="number"  placeholder="Ex-Year"  />
+            </div>
+          </div>
+          <div class="col-md-2 p-3">
+            <div class="form-group">
+              <label>CVV Number</label>
+              <input class="form-control" type="number"  placeholder="CVV number" formControlName="cvv" />
+              <span *ngIf="cvv && cvv.invalid " class="text-danger"> Required!!!</span>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input class="form-control" type="number" placeholder="phone"/>
+              <span *ngIf="phone && phone.invalid " class="text-danger">This field required!!!</span>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 p-3">
+            <div class="form-group">
+              <label>CVV Number</label>
+              <input class="form-control" type="text" placeholder="Phone Number"/>
+            </div>
+          </div> -->
+        </div>
+        
+        <div class="form-group">
+          <label>Message</label>
+          <textarea cols="30" rows="4" class="form-control" placeholder="Write something . . ."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="display-block p-3"> Status</label>
+          <div class="form-check form-check-inline p-3">
+            <input class="form-check-input" type="radio" name="status" id="product_active" value="Active" checked   />
+            <label class="form-check-label" for="product_active">
+              Available
+            <!-- your are  {{Isactive}} -->
+            </label>
+          </div>
+          <div class="form-check form-check-inline p-3">
+            <input class="form-check-input" type="radio" name="status" id="product_inactive" value="Inactive"  />
+            <label class="form-check-label" for="product_inactive">
+              Unavailable
+            </label>
+          </div>
+        </div>
+        <div class="m-t-20 text-center p-3">
+           <a href="dashboard" class="btn btn-secondary submit-btn">
+            Make Payment
+           </a>
+
+
+           
+
+
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  

@@ -1,0 +1,8 @@
+.row .col-sm-8{
+    margin-left: 1400px;
+    margin-top: -50px;
+}
+
+.row .col-sm-8 .col-sm-12 .btn-secondary{
+    margin: 10px;
+}
